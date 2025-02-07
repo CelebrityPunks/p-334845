@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 
@@ -30,14 +31,14 @@ export const MarketplaceCard: React.FC<MarketplaceCardProps> = ({
   totalPrice
 }) => {
   return (
-    <Card className="bg-white">
+    <Card className="glass-card">
       <CardHeader className="flex flex-row items-center justify-between p-4">
         <div>
-          <p className="text-sm font-medium">Maker: {maker}</p>
-          <p className="text-sm text-gray-500">{date} at {time}</p>
+          <p className="text-sm font-medium">{maker}</p>
+          <p className="text-sm text-muted-foreground">{date} at {time}</p>
         </div>
         <span className={`px-3 py-1 rounded-full text-sm ${
-          type === 'buy' ? 'bg-green-100 text-green-700' : 'bg-red-100 text-red-700'
+          type === 'buy' ? 'bg-green-500/20 text-green-500' : 'bg-red-500/20 text-red-500'
         }`}>
           {type.charAt(0).toUpperCase() + type.slice(1)}
         </span>
@@ -50,26 +51,26 @@ export const MarketplaceCard: React.FC<MarketplaceCardProps> = ({
         </div>
 
         <p className="text-sm mb-4">
-          Price Protection: <span className="text-purple-600">{priceProtection}</span>
+          Price Protection: <span className="text-primary">{priceProtection}</span>
         </p>
 
         <div className="grid grid-cols-3 gap-4">
           <div>
-            <p className="text-sm text-gray-500">Market Price</p>
+            <p className="text-sm text-muted-foreground">Market Price</p>
             <p className="font-medium">{marketPrice}</p>
           </div>
           <div>
-            <p className="text-sm text-gray-500">Order Price</p>
+            <p className="text-sm text-muted-foreground">Order Price</p>
             <p className="font-medium">{orderPrice}</p>
           </div>
           <div>
-            <p className="text-sm text-gray-500">Amount</p>
+            <p className="text-sm text-muted-foreground">Amount</p>
             <p className="font-medium">{amount}</p>
           </div>
         </div>
 
-        <div className="flex justify-between items-center mt-4 pt-4 border-t">
-          <span className="text-sm text-gray-500">Total Price</span>
+        <div className="flex justify-between items-center mt-4 pt-4 border-t border-border/50">
+          <span className="text-sm text-muted-foreground">Total Price</span>
           <span className="font-medium">{totalPrice}</span>
         </div>
       </CardContent>
