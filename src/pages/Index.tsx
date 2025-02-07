@@ -74,16 +74,16 @@ const Index = () => {
               </div>
             </div>
 
-            <div className="bg-white rounded-lg p-6 shadow-sm">
+            <div className="glass-card rounded-lg p-6">
               <div className="flex justify-between mb-2">
-                <span className="text-sm text-gray-500">TOTAL WALLET BALANCE</span>
+                <span className="text-sm text-muted-foreground">TOTAL WALLET BALANCE</span>
                 <div className="space-x-2">
                   <Button variant="ghost" size="sm">Hide</Button>
                   <Button variant="ghost" size="sm">Show</Button>
                 </div>
               </div>
               <div className="text-2xl font-bold">••••••••••••••</div>
-              <div className="text-gray-500">•••••••••••</div>
+              <div className="text-muted-foreground">•••••••••••</div>
             </div>
           </div>
 
