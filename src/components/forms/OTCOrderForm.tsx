@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -7,7 +8,7 @@ import { Switch } from "@/components/ui/switch";
 
 export const OTCOrderForm = () => {
   return (
-    <div className="bg-white rounded-lg p-6">
+    <div className="glass-card rounded-lg p-6">
       <div className="mb-6">
         <h2 className="text-xl font-semibold mb-4">Create OTC Order</h2>
         <div className="flex gap-4 mb-6">
@@ -38,12 +39,12 @@ export const OTCOrderForm = () => {
 
           <div>
             <Label>Amount</Label>
-            <Input type="number" placeholder="Enter amount" />
+            <Input type="number" placeholder="Enter amount" className="glass-input" />
           </div>
 
           <div>
             <Label>Trade Price per token</Label>
-            <Input type="number" placeholder="Enter price" />
+            <Input type="number" placeholder="Enter price" className="glass-input" />
           </div>
 
           <div>
@@ -61,7 +62,7 @@ export const OTCOrderForm = () => {
           </div>
         </div>
 
-        <div className="pt-6 border-t">
+        <div className="pt-6 border-t border-border/50">
           <h3 className="font-medium mb-4">Price Protection</h3>
           <div className="flex items-center gap-2">
             <Switch id="price-protection" />
@@ -71,20 +72,20 @@ export const OTCOrderForm = () => {
           </div>
         </div>
 
-        <div className="pt-6 border-t">
+        <div className="pt-6 border-t border-border/50">
           <div className="flex justify-between mb-2">
-            <span className="text-gray-600">You will get</span>
+            <span className="text-muted-foreground">You will get</span>
             <span className="font-medium">169.000 ₳</span>
           </div>
           <div className="flex justify-between mb-4">
-            <span className="text-gray-600">Platform Fee (0.25%)</span>
+            <span className="text-muted-foreground">Platform Fee (0.25%)</span>
             <span className="font-medium">0.422 ₳ (added)</span>
           </div>
           <div className="flex justify-between font-medium">
             <span>Total with Fee</span>
             <span>169.423 ₳</span>
           </div>
-          <p className="text-sm text-gray-500 mt-2">
+          <p className="text-sm text-muted-foreground mt-2">
             Fee is only charged when trade is executed and refunded if cancelled
           </p>
         </div>
