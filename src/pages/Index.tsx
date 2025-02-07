@@ -22,12 +22,26 @@ const Index = () => {
     // Add other crypto data here
   ];
 
-  const marketplaceData = [
+  const marketplaceData: Array<{
+    maker: string;
+    date: string;
+    time: string;
+    type: 'buy' | 'sell';  // Explicitly define as union type
+    token: {
+      icon: string;
+      name: string;
+    };
+    priceProtection: string;
+    marketPrice: string;
+    orderPrice: string;
+    amount: string;
+    totalPrice: string;
+  }> = [
     {
       maker: '$Cardanowhale',
       date: '31.01.2022',
       time: '12:00 pm',
-      type: 'buy',
+      type: 'buy' as const,  // Explicitly type as 'buy'
       token: {
         icon: 'https://cdn.builder.io/api/v1/image/assets/0bab94bd08a540a081d66c0dc0f4587d/2eb705451e515f9b5edc6196c763e8b6bdf63308e1619d2d5f6c86e7b8cd49a0',
         name: 'Lorsky'
@@ -37,8 +51,7 @@ const Index = () => {
       orderPrice: '38.000₳',
       amount: '54',
       totalPrice: '1238236.000₳'
-    },
-    // Add other marketplace data here
+    }
   ];
 
   return (
